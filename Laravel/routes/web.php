@@ -26,7 +26,7 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });*/
-
+Route::get('/Test',[MyController::class,'Test'] );
 Route::get('/index',[MyController::class,'index'] );
 Route::get('/generic',[MyController::class,'generic'] );
 Route::get('/elements',[MyController::class,'elements'] );
