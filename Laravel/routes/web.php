@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/Test', function () {
+Route::get('/Test', function () {
     return view('Test');
 });
 
@@ -27,23 +27,18 @@ Route::get('/index', function () {
     return view('index');
 });*/
 Route::get('/Test',[MyController::class,'Test'] );
-Route::get('/index',[MyController::class,'index'] );
+/*Route::get('/index',[MyController::class,'index'] );*/
 Route::get('/generic',[MyController::class,'generic'] );
 Route::get('/elements',[MyController::class,'elements'] );
+
+Route::get('/signup',[MyController::class,'index'] );
+Route::post('/signup',[MyController::class,'submit'] );
+
 //exam//
+/*
+//app.blade.php
+Route::get('/index',[MyController::class,'app']);
 
-Route::get('/output1/{id}/{k}', function ($id,$k) {
-    $id = 1;
-    $k = 0;
-$text = array("Happy" , "New" , "Year");
-for ($i=0; $i <= $id; $i++) { 
-    echo $text[$i];
-    echo " ";
-        for ($x=2; $x >= $k; $x--) {
-            echo $text[$x]; 
-            echo " ";
-        }
-}
-});
-    
-
+//route for display data
+Route::post('/index',[MyController::class,'displayData']);
+*/

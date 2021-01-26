@@ -1,96 +1,119 @@
+  
 @extends('master.master')
-@section('Title','Introspect by TEMPLATED')
+@section('Title','Sign Up Form by Colorlib')
 @section('section')
-<section id="banner">
-				<div class="inner">
-					<h1>Introspect: <span>A free + fully responsive<br />
-					site template by TEMPLATED</span></h1>
-					<ul class="actions">
-						<li><a href="#" class="button alt">Get Started</a></li>
-					</ul>
-				</div>
-			</section>
+ <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/signup-img.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form action="/signup" method="POST" class="register-form" id="register-form">
+                        @csrf
+                        <h2>student registration form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name :</label>
+                                <input type="text" name="name" id="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Father Name :</label>
+                                <input type="text" name="father_name" id="father_name" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" required/>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <div class="form-select">
+                                    <select name="state" id="state">
+                                        <option value=""></option>
+                                        <option value="us">America</option>
+                                        <option value="uk">English</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <div class="form-select">
+                                    <select name="city" id="city">
+                                        <option value=""></option>
+                                        <option value="losangeles">Los Angeles</option>
+                                        <option value="washington">Washington</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birth_date">DOB :</label>
+                            <input type="text" name="birth_date" id="birth_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode :</label>
+                            <input type="text" name="pincode" id="pincode">
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course :</label>
+                            <div class="form-select">
+                                <select name="course" id="course">
+                                    <option value=""></option>
+                                    <option value="computer">Computer Operator & Pragramming Assistant</option>
+                                    <option value="desiger">Designer</option>
+                                    <option value="marketing">Marketing</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email ID :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                        @if(empty($Name) || empty($Father_name) || empty($Address) || empty($Gender) || empty($State) || empty($City) || empty($Birth_date) || empty($Pincode) || empty($Course) || empty($Email))
+                        
+                        @else
+                                Name: {{ $Name }}
+                                Father Name: {{ $Father_name }}
+                                Address: {{ $Address }}
+                                Gender: {{ $Gender }}
+                                State: {{ $State }}
+                                City: {{ $City }}
+                                DOB: {{ $Birth_date }}
+                                Pincode: {{ $Pincode }}
+                                Course: {{ $Course }}
+                                Email ID:{{ $Email }}
+                        @endif
 
-		<!-- One -->
-			<section id="one">
-				<div class="inner">
-					<header>
-						<h2>Magna Etiam Lorem</h2>
-					</header>
-					<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu, erisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante.</p>
-					<ul class="actions">
-						<li><a href="#" class="button alt">Learn More</a></li>
-					</ul>
-				</div>
-			</section>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-		<!-- Two -->
-			<section id="two">
-				<div class="inner">
-					<article>
-						<div class="content">
-							<header>
-								<h3>Pellentesque adipis</h3>
-							</header>
-							<div class="image fit">
-								<img src="images/pic01.jpg" alt="" />
-							</div>
-							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
-						</div>
-					</article>
-					<article class="alt">
-						<div class="content">
-							<header>
-								<h3>Morbi interdum mol</h3>
-							</header>
-							<div class="image fit">
-								<img src="images/pic02.jpg" alt="" />
-							</div>
-							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
-						</div>
-					</article>
-				</div>
-			</section>
-
-		<!-- Three -->
-			<section id="three">
-				<div class="inner">
-					<article>
-						<div class="content">
-							<span class="icon fa-laptop"></span>
-							<header>
-								<h3>Tempus Feugiat</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna lorem ullamcorper laoreet, lectus arcu.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-					</article>
-					<article>
-						<div class="content">
-							<span class="icon fa-diamond"></span>
-							<header>
-								<h3>Aliquam Nulla</h3>
-							</header>
-							<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-					</article>
-					<article>
-					<div class="content">
-							<span class="icon fa-laptop"></span>
-							<header>
-								<h3>Sed Magna</h3>
-							</header>
-							<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-					</article>
-				</div>
-			</section>
-@endesection
+    </div>
+    
+@endsection
+@section('footer')
+	Laravel Blade Template
+@endsection
