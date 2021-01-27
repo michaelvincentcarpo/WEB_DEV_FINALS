@@ -91,20 +91,6 @@
                             <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
                             <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
                         </div>
-                        @if(empty($Name) || empty($Father_name) || empty($Address) || empty($Gender) || empty($State) || empty($City) || empty($Birth_date) || empty($Pincode) || empty($Course) || empty($Email))
-                        
-                        @else
-                                Name: {{ $Name }}
-                                Father Name: {{ $Father_name }}
-                                Address: {{ $Address }}
-                                Gender: {{ $Gender }}
-                                State: {{ $State }}
-                                City: {{ $City }}
-                                DOB: {{ $Birth_date }}
-                                Pincode: {{ $Pincode }}
-                                Course: {{ $Course }}
-                                Email ID:{{ $Email }}
-                        @endif
                     </form>
                 </div>
             </div>
