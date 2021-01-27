@@ -6,50 +6,25 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-	public function Test(){
-    	 return view('Test');
+	   public function index(){
+        return view('index');
     }
-    /*public function index(){
-    	 return view('index');
-    }*/
-    public function generic(){
-    	 return view('generic');
-    }
-    public function elements(){
-    	 return view('elements');
+    public function display(){
+        return view('display');
     }
 
-    public function index(){
-         return view('index');
+     public function submit(Request $request){
+        
+        $name = $request->input('name');
+        $fname = $request->input('father_name');
+        $address = $request->input('address');
+        $gender = $request->input('gender');
+        $state = $request->input('state');
+        $city = $request->input('city');
+        $birthdate = $request->input('birth_date');
+        $course = $request->input('course');
+        $pincode = $request->input('pincode');
+        $email = $request->input('email');
+        return view('display',['name' => $name, 'fname' => $fname,'address' => $address, 'gender' => $gender, 'state' => $state, 'city' => $city, 'birthdate' => $birthdate, 'course' => $course, 'pincode' => $pincode, 'email' => $email ]);
     }
-    public function submit(Request $request)
-    {
-        $Name = $request->input('name');
-        $Father_name = $request->input('father_name');
-        $Address = $request->input('address'); 
-        $Gender = $request->input('gender'); 
-        $State = $request->input('state');  
-        $City = $request->input('city');  
-        $Birth_date = $request->input('birth_date'); 
-        $Pincode = $request->input('pincode');
-        $Course = $request->input('course');
-        $Email = $request->input('email'); 
-    
-        return view('index',['name' => $Name, 'father_name' => $Father_name, 'address' => $Address, 'gender' => $Gender, 'state' => $State, 'city'=> $City, 'birth_date' => $Birth_date, 'pincode' => $Pincode, 'course' => $Course, 'email' => $Email]);
-    }
-/*
-     public function app(){
-        return view('app');
-    }
-
-    public function displayData(Request $request){
-        //initialization
-
-        $username = $request->input('uname');
-        $password = $request->input('pword');
-
-        return view('app',['uname' => $username, 'pword' => $password]);
-
-    }
-*/
 }

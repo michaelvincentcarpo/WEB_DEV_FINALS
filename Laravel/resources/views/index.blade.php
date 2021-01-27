@@ -9,7 +9,7 @@
                     <img src="images/signup-img.jpg" alt="">
                 </div>
                 <div class="signup-form">
-                    <form action="/signup" method="POST" class="register-form" id="register-form">
+                    <form action="/display" method="POST" class="register-form" id="register-form">
                         @csrf
                         <h2>student registration form</h2>
                         <div class="form-row">
@@ -34,7 +34,7 @@
                                 <span class="check"></span>
                             </div>
                             <div class="form-radio-item">
-                                <input type="radio" name="gender" id="female">
+                                <input type="radio" name="gender" id="female" >
                                 <label for="female">Female</label>
                                 <span class="check"></span>
                             </div>
@@ -105,15 +105,9 @@
                                 Course: {{ $Course }}
                                 Email ID:{{ $Email }}
                         @endif
-
                     </form>
                 </div>
             </div>
         </div>
-
-    </div>
-    
-@endsection
-@section('footer')
-	Laravel Blade Template
+    </div> 
 @endsection

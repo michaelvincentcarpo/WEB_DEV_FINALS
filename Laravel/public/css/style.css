@@ -265,6 +265,15 @@ body {
 .signup-img {
   margin-bottom: -7px; }
 
+.display-form {
+  width: 60%; }
+
+.display-img{
+  width: 40%; }
+
+.display-img {
+  margin-bottom: -7px; }
+
 .register-form {
   padding: 50px 100px 50px 70px; }
 
