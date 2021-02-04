@@ -1,0 +1,179 @@
+.cover{
+	width: 100%;
+	height: 500px;
+}
+
+.profile{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	position: absolute;
+	top: 230px;
+	left: 60px;
+}
+#covertop{
+	position: relative;
+}
+.resortN{
+	font-family:Broadway;
+	position: absolute;
+	top: 300px;
+	left: 340px;
+	
+	font-size: 90px;
+	background: linear-gradient( 
+            to right, #00ff00, #3399ff); 
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+        -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    
+}
+#videoback{
+	background:  #99ffcc;
+	width: 100%;
+	height: 300px;
+
+}
+#video{
+	padding-top:  25px;
+}
+
+.vidL{
+	margin-left: 0px ;
+	margin-right: 48px
+}
+
+.vidR{
+	margin-left: 48px ;
+}
+.Book{
+	width: 200px;
+	padding: 10px 10px;
+	background: linear-gradient(to right, #00ff00, #3399ff);
+	border: 3px solid black;
+	border-radius: 30px;
+	margin-right: 10px;
+	float: right;
+}
+.out{
+	width: 120px;
+	padding: 10px 10px;
+	background: linear-gradient(to right, #00ff00, #3399ff);
+	border: 3px solid black;
+	border-radius: 30px;
+	
+	float: right;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  margin-bottom: 5px;
+  padding-top: 20px;
+  height: 50px;
+}
+
+
+#navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 60px;
+}
+
+
+/*Navigation CSS*/
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.container{
+			display: inline-block;
+            width:49%;
+            height:300px;
+            border-radius:5px;
+            border:1px solid red;
+            overflow:hidden;
+             transition: 0.1s ease;
+        }
+.cottage{
+	height: 300px;
+}
+.container2{
+			display: inline-block;
+            width:49%;
+            height:300px;
+            border-radius:5px;
+            border:1px solid red;
+            overflow:hidden;
+             transition: 0.1s ease;
+             float: right;
+        }
+#pool{
+
+	background-color: white;;
+	width: 100%;
+	height: 60px;
+	margin-bottom: 5px;
+	}
+.pool{
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#venue{
+
+	background-color: white;;
+	width: 100%;
+	height: 60px;
+	margin-bottom: 5px;
+	}
+.venue{
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	padding-top: 10px;
+}
+#imgback{
+	background:  #99ffcc;
+	width: 100%;
+	height: 700px;
+
+}
+
+.image{
+	width: 400px;
+	height: 300px;
+	padding-top: 30px;
+}
+
+
+
+
+.image2{
+	width: 400px;
+	height: 300px;
+	padding-top: 20px;
+}
+
+

@@ -12,15 +12,32 @@ use App\Http\Controllers\MyController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//default//
+//default//get
 Route::get('/', function () {
     return view('welcome');
 });
 
 //Mainpage//
-Route::get('/main',[MyController::class,'index'] );
-//ViewPage//
-Route::get('/display',[MyController::class,'display']);
-Route::post('/display',[MyController::class,'submit'] );
+Route::get('/HomePage',[MyController::class,'HomePage'] );
+Route::get('/About',[MyController::class,'About'] );
+//Form page/
+Route::get('/Form',[MyController::class,'Form'] );
+Route::post('/Form',[MyController::class,'insertdata'] );
+//admin page//
+Route::get('/Admin',[MyController::class,'Admin'] );
 
+Route::get('/Admin_v2',[MyController::class,'Admin_v2'] );
+Route::get('/Update',[MyController::class,'Update'] );
 
+//login/regester//
+Route::get('/Login_Register',[MyController::class,'Login_Register'] );
+Route::post('/Login_Register',[MyController::class,'insertacc'] );
+
+//route for delete record
+Route::get('/delete/{id}',[HomeController::class,'deleteData']);
+
+//route for editing data
+Route::get('/edit/{id}',[HomeController::class,'editData']);
+
+//route for updating Data
+Route::post('/edit/{id}',[HomeController::class,'updateData']);

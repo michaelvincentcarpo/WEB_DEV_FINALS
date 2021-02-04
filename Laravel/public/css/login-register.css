@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding-bottom: 0;
+	font-family: sans-serif;
+}
+
+.hero{
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(/img/back.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+
+.log-box{
+	width: 380px;
+	height: 480px;
+	position: relative;
+	margin: 6% auto;
+	background-color: white;
+	padding: 5px;
+	overflow: hidden;
+
+}
+.button-box{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius:  30px;
+	}
+.toggle-btn{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+#btn{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #00ff00, #3399ff);
+	border-radius: 30px;
+	transition: .5s;
+}
+.logo{
+	margin: 20px auto;
+	text-align: center; 
+}
+
+.logo img{
+	width: 120px;
+	margin: 0 12px;
+	box-shadow: 0 0 20px 0 #7f7f7f3d;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.input{
+	margin-top: 30px;
+	top: 200px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+
+}
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: transparent;
+	background: transparent; 
+}
+.submit{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin:auto;
+	background: linear-gradient(to right, #00ff00, #3399ff);
+border: 0;
+outline: none;
+border-radius: 30px;
+}
+
+#login{
+	left: 50px;
+}
+
+#register{
+	left: 450px;
+}
+.regtxt{
+font-size: 12px;
+text-align: center;;
+}
+
+h1{
+	color: red;
+	font-size: 15px;
+}
+
+#toggle{
+	position: absolute;
+	transform: translateY(-50%);
+	width: 25px;
+	height: 25px;
+	background: url(/img/show.png);
+	background-size: cover;
+	cursor: pointer;
+	left: 230px;
+	margin-top: -20px;
+}
+#toggle.hide{
+	
+	background: url(/img/hide.png);
+	background-size: cover;
+	
+
+}
+
+
+
+.warning{
+color: red;
+font-size: 10px;
+font-weight: bold;
+}

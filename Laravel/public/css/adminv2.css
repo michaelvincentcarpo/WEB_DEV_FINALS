@@ -1,0 +1,226 @@
+#navbar {
+  overflow: hidden;
+ background-color: lightblue;
+  margin-bottom: 5px;
+  height: 90px;
+}
+
+
+#navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 60px;
+}
+
+
+/*Navigation CSS*/
+.content {
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+}
+
+.sticky + .content {
+ 
+}
+body{
+	background-image: url(img/back.jpg);
+	background-size:cover;
+background-attachment: fixed;
+		overflow-y: scroll;
+}
+	
+.search{
+	margin-left: 30px;
+	padding-top: 25px;
+}
+.searchtext{
+	font-size: 20px;
+	font-weight: bold;
+	color: green;
+
+}
+
+.inputsearch{
+	height: 25px;
+	width: 200px;
+}
+.admintext{
+	color: white;
+	margin-right: 80px;
+	font-weight: bold;
+	font-size: 55px;
+	float: right;
+	font-style: italic;
+	margin-top: -20px;
+}
+.profile{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		margin-top: 5px;
+}
+	.form{
+		border: 2px solid black;
+		width: 660px;
+		height: 1260px;
+		background: #66ffff;
+		margin-left: 250px;
+		padding-bottom: 30px; 
+		padding-left: 30px;
+		padding-right: 30px;
+		z-index: 99;
+	}
+	.name{
+		float: left;
+		margin-right:  5px;
+		margin-left: 25px;
+	}
+	.Fname{
+		float: left;
+		margin-left: 30px;
+		width: 120px;
+	}
+
+	.Lname{
+		float: left;
+		width: 120px;
+		
+	}
+	.address{
+		float: left;
+		margin-right: 5px;
+
+	}
+	.add{
+		float: left;
+		margin-left: 30px;
+		width: 120px;
+	}
+	.brg{
+		float: left;
+		width: 120px;
+	}
+	.Phone{
+		float: left;
+		margin-right: 5px;
+		margin-left: 10px;
+	}
+	.num{
+		float: left;
+		width: 120px;
+	}
+	.gmail{
+		float: left;
+		margin-right: 5px;
+		margin-left: 35px;
+	}
+	.email{
+		float: left;
+		width: 120px;
+	}
+	.booking{
+		font-weight: bold;
+		font-size: 20px
+	}
+	#booking{
+		background-color: white;
+	}
+	.cottage{
+		float: left;
+		margin-right: 5px;
+	}
+	.cot{
+		float: left;
+		width: 120px;
+
+	}
+	#icon{
+		display: inline-block;
+		
+	}
+	.icon{
+		width: 80px;
+		height: 80px;
+		margin-right: 100px;
+	}
+	
+	.kid{
+		margin-left: 70px;
+		font-size: 20px;
+
+	}
+.senior{
+		margin-left: 140px;
+		font-size: 20px;
+
+	}
+.adult{
+		margin-left: 145px;
+		font-size: 20px;
+
+	}
+	.dis{
+		margin-right: 20px;
+		float: left;
+		width: 120px;
+	}
+	#cottages{
+		display: inline-block;
+		
+	}
+	.cottageS{
+		width: 120px;
+		height: 80px;
+		margin-left: 45px;
+	}
+	.cottageM{
+		width: 120px;
+		height: 80px;
+		margin-left: 100px;
+	}
+	.cottageL{
+		width: 120px;
+		height: 80px;
+		margin-left: 100px;
+	}
+	.cotpriceS{
+		margin-left: 65px;
+	}
+	.cotpriceM{
+		margin-left: 140px;
+	}
+	.cotpriceL{
+		margin-left: 130px;
+	}
+	.venpriceS{
+		margin-left: 55px;
+	}
+	.venpriceM{
+		margin-left: 125px;
+	}
+	.venpriceL{
+		margin-left: 115px;
+	}
+	.dis2{
+		margin-right: 50px;
+		float: left;
+	
+	}
+	.Book{
+	width: 200px;
+	padding: 10px 10px;
+	background: linear-gradient(to right, #00ff00, #3399ff);
+	border: 1px solid blue;
+	border-radius: 30px;
+
+}
