@@ -9,9 +9,10 @@ class MyController extends Controller
 {
     //loginpage
 
-    public function Login_Register(){
+    public function Login_Register(Request $request){
      //command for retrieving records from the mysql database
-
+        $textem=$request->input('textem');
+        $textpa=$request->input('textpa');
         $users =  DB::SELECT("SELECT * FROM account");
         return view('Login_Register',['users' => $users]);
     }
@@ -72,51 +73,12 @@ class MyController extends Controller
     }
     //adminpage/
     public function Admin(){
+        $id=$request->input('id')
+        DB::SELECT("SELECT * FROM tblbooking_info ",;
         return view('Admin');
-    }
-        public function Admin_v2(){
-        return view('Admin_v2');
     }
     public function Update(){
         return view('Update');
     }
 
-
-
-
-
-
-
-
-    //incase
-    public function deleteData($id){
-
-        DB::DELETE("DELETE FROM tblbooking_info WHERE id=?",[$id]);
-          $users =  DB::SELECT("SELECT * FROM tblbooking_info");
-        return view('Admin_v2',['users' => $users]);
-    }
-
-    public function editData($id){
-        $profile = DB::SELECT("SELECT * FROM tblbooking_info WHERE id=?",[$id]);
-        $isUpdate = "";
-        return view('Update',['profile'=> $profile,'isUpdate' => $isUpdate]);
-    }
-
-    public function updateData(Request $request, $id){
-         //initialization
-        $lname=$request->input('lname');
-        $fname=$request->input('fname');
-        $barangay=$request->input('barangay');
-
-        //updating record
-       $isUpdate =  DB::UPDATE('UPDATE tblbooking_info set lname=?,fname=?,barangay=? WHERE id=?',[$lname,$fname,$barangay,$id]);
-        $profile = DB::SELECT("SELECT * FROM tblbooking_info WHERE id=?",[$id]);
-        
-        if ($isUpdate == 1 ) {
-            $msg = "Record Updated";
-        }else{
-            $msg = "Record Not Updated";
-        }
-        return view('Update',['profile'=> $profile,'msg' => $msg]);
-    }
 }

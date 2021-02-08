@@ -2,50 +2,69 @@
 <html>
 <head>
 	<title> ADMIN </title>
-</head>
 <link rel="stylesheet" type="text/css" href="css/adminv2.css">	
-<body>
-	<div class="head" id="navbar">
+</head>
+<div class="head" id="navbar">
 			<div class="search">
 
-				
-
 				<label class="admintext"> DB Admin</label>
+				<a href="/Admin">Admin</a>
 			</div>
 		</div>
-	</form>
-		<br>
-		<br>
-		<div class="form">
-			<div>
-				<center>
-					<img src="img/logo.png" class="profile">
-				</center>
-			</div>
-			<div id="booking">
-				<center><label class="booking">CLIENT INFORMATION</label></center>
-			<table border = 1>
-		<th>LAST_NAME</th>
-		<th>FIRST_NAME</th>
-		<th>BARANGAY</th>
+<body> 
+		<table border = 1>
+		<th>id</th>	
+		<th>lname</th>
+		<th>fname</th>
+		<th>barangay</th>
+		<th>municipality</th>
+		<th>province</th>
+		<th>number</th>
+		<th>email</th>
+		<th>cottage_no</th>
+		<th>kids</th>
+		<th>adults</th>
+		<th>senior</th>
+		<th>date_of_reg</th>
+		<th>time_</th>
+		<th>start</th>
+		<th>end_</th>
+		<th>cottage_s</th>
+		<th>cottage_m</th>
+		<th>cottage_l</th>
+		<th>venue</th>
 		<th>Action</th>
+
 		@foreach($users as $profile)
 			<tr>
+				<td> {{ $profile->id}}</td>
 				<td> {{ $profile->lname}}</td>
 				<td> {{ $profile->fname}}</td>
 				<td> {{ $profile->barangay}}</td>
-				<td><a href="/delete/{{$profile->id}}">DELETE</a>
-				<a href="/edit/{{$profile->id}}">EDIT</a>
+				<td> {{ $profile->municipality}}</td>
+				<td> {{ $profile->province}}</td>
+				<td> {{ $profile->phone}}</td>
+				<td> {{ $profile->email}}</td>
+				<td> {{ $profile->cottage_no}}</td>
+				<td> {{ $profile->kids}}</td>
+				<td> {{ $profile->adult}}</td>
+				<td> {{ $profile->senior}}</td>
+				<td> {{ $profile->date_of_reg}}</td>
+				<td> {{ $profile->time_}}</td>
+				<td> {{ $profile->start}}</td>
+				<td> {{ $profile->end_}}</td>
+				<td> {{ $profile->cottage_s}}</td>
+				<td> {{ $profile->cottage_m}}</td>
+				<td> {{ $profile->cottage_l}}</td>
+				<td> {{ $profile->venue}}</td>
+				<td>
+				<a href="/Update_v2/{{$profile->id}}">UPDATE</a>
 			</td>
 			</tr>
 
 		@endforeach
 
 	</table>
-</div>
-</form>
-
-
 <script>
 	
 window.onscroll = function() {myFunction()};

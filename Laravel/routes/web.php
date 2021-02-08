@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes  
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -24,20 +25,26 @@ Route::get('/About',[MyController::class,'About'] );
 Route::get('/Form',[MyController::class,'Form'] );
 Route::post('/Form',[MyController::class,'insertdata'] );
 //admin page//
-Route::get('/Admin',[MyController::class,'Admin'] );
-
-Route::get('/Admin_v2',[MyController::class,'Admin_v2'] );
-Route::get('/Update',[MyController::class,'Update'] );
+Route::get('/Admin',[MyController::class,'admin'] );
+Route::post('/Admin',[MyController::class,'search'] );
+Route::post('/search',[MyController::class,'Update'] );
 
 //login/regester//
 Route::get('/Login_Register',[MyController::class,'Login_Register'] );
 Route::post('/Login_Register',[MyController::class,'insertacc'] );
 
-//route for delete record
-Route::get('/delete/{id}',[HomeController::class,'deleteData']);
+//example
 
-//route for editing data
-Route::get('/edit/{id}',[HomeController::class,'editData']);
+//route for retrieving record
+Route::get('/home',[HomeController::class,'home']);
+
+Route::get('/Admin_v2',[HomeController::class,'Admin_v2']);
+
+//route for inserting record
+Route::post('/home',[HomeController::class,'insertData']);
+
+
+Route::get('/Update_v2/{id}',[HomeController::class,'editData']);
 
 //route for updating Data
-Route::post('/edit/{id}',[HomeController::class,'updateData']);
+Route::post('/Update_v2/{id}',[HomeController::class,'updateData']);

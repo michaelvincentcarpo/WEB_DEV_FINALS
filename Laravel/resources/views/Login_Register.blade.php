@@ -31,6 +31,8 @@
                   <br>
    					<input type="submit" class="submit" name="login" value="Login">
    				</form>
+
+
    				<form id="register" class="input" method="POST" class="/Login_Register">
                   @csrf
    					<input type="text" name="uname" class="input-field" placeholder="Username: " required>

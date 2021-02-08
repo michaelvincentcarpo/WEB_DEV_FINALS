@@ -1,14 +1,10 @@
+@extends('master.master')
+@section('Title','HOME')
+@section('section')
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title> Update Products</title>
-</head>
-<link rel="stylesheet" type="text/css" href="css/update.css">
-<body>
-<form method="POST" action="">
-	@csrf
-		<div class="form">
+	<form method="POST" action="/home">
+		@csrf  {{--  cross site request forgery for unwanted users --}}
+<div class="form">
 			<div>
 				<center>
 					<img src="img/logo.png" class="profile">
@@ -19,15 +15,13 @@
 			</div>
 			<br>
 			<div>
-				<input type="text" name="id" placeholder="Last Name:"  class="Lname" value="">
-				<br>
 				<label class="name">NAME:</label>
+				
 				<input type="text" name="lname" placeholder="Last Name:"  class="Lname"  value="">
 				<input type="text" name="fname" placeholder="First Name:" class="Fname" value="">
 			</div>
 			<br>
 			<br>
-	
 			<div>
 				<label class="address">ADDRESS:</label>
 				<input type="text" name="barangay" placeholder="Barangay"     class="brg" value="">
@@ -160,30 +154,28 @@
 				<label  class="venpriceL">₱15,000 (81-120)</label>
 			</div>
 
-			 <label>VENUE:</label>
-			 <select name="venue"  value="">
-			 	<option  value=""></option>
+			 <label>VENUE:</label><select name="venue">
+			  	<option  value=""></option>
 			    <option  value="SMALL">SMALL</option>
 			    <option  value="MEDIUM">MEDIUM</option>
 			    <option value="LARGE">LARGE</option>
-			</select>>
+			  </select>
 			<br>
 			<br>
 			<br>
 			<center>
-			<input class="Book" type="submit" name="btnUpdate" value="Update Record">
+			<input type="submit" name="btnInsert" class="btn btn-success" value="Register">
 			</center>
 
 
 </div>
-</form>
-</td>
-</tr>
-</table>
-	</div>
 
-
-	</center>
-
-</body>
-</html>
+	{{-- <h2>Welcome to Homepage</h2>
+	<br>
+	<h1>Advance Web Development</h1>
+	Student ID : {{ $id }}
+	<br>
+	Firstname: {{ $fname }}
+	<br>
+	Lastname: {{ $lname }} --}}
+@endsection
