@@ -16,7 +16,7 @@
 
 
 <div id="navbar">
-		<a href="Resort_Booking"><input class="out" type="submit" name="" value="log Out"></a>
+		<a href="Login_Register"><input class="out" type="submit" name="" value="log Out"></a>
 		<a href="Form"><input class="Book" type="submit" name="" value="Book Now"></a>
 		<a href="About">ABOUT</a>		
 </div>

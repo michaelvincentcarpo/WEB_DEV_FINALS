@@ -8,7 +8,11 @@
 <body>
 	<div class="head" id="navbar">
 			<div class="search">
+				<label class="searchtext">Enter Client Code &nbsp;&nbsp;</label>
+				<input type="text" placeholder="Search" name="id" class="inputsearch">
+				<input type="submit" class="sub" value="Search" name="search"> 
 				<label class="admintext"> DB Admin</label>
+				<a href="/Admin_v2">Records</a>
 			</div>
 		</div>
 <form method="POST" action="/Update_v2/{{ $profile[0]->id }}">
@@ -185,7 +189,6 @@
 </div>
 </form>
 			<br><br>
-			<center><a href="/Admin_v2">Back to Records</a></center>
 
 	@if(isset($msg))
 		{{ $msg }}

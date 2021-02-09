@@ -24,7 +24,7 @@
 			<br>
 			<div>
 				<label class="name">NAME:</label>
-				<input type="text" name="lname" placeholder="{{$profile->lname}}"  class="Lname" required="">
+				<input type="text" name="lname" placeholder="Last Name:"  class="Lname" required="">
 				<input type="text" name="fname" placeholder="First Name:" class="Fname" required="">
 			</div>
 			<br>

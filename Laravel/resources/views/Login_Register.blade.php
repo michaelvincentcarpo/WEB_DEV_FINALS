@@ -19,10 +19,10 @@
    					<img src="/img/anim.gif">
    				</div>	
 
-   				<form id="login" class="input" method="GET" class="/login-register">
+   				<form id="login" class="input" method="GET" class="/HomePage">
                   @csrf
-   					<input type="text" name="txtem" class="input-field" placeholder="Email: "  required>
-   					<input type="password" name="txtpa" class="input-field" placeholder="Password:" id="password"  required>
+   					<input type="text" name="email" class="input-field" placeholder="Email: "  required>
+   					<input type="password" name="password" class="input-field" placeholder="Password:" id="password"  required>
                   <div id="toggle" onclick="showhide();"></div>
                   <div class="regtxt">If you don't have Account top the <b>REGISTER</b> buttont on top!
                </div>
@@ -41,7 +41,7 @@
                   <div id="toggle" onclick="showhide();"></div>
                   <br>
                   <br>
-   					<input type="submit" class="submit" name="reg" value="Signup">
+   					<input type="submit" class="submit" name="reg" value="Signup" >
    				</form>
    		</div>
    </div>

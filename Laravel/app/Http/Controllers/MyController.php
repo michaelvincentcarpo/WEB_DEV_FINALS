@@ -13,7 +13,7 @@ class MyController extends Controller
      //command for retrieving records from the mysql database
         $textem=$request->input('textem');
         $textpa=$request->input('textpa');
-        $users =  DB::SELECT("SELECT * FROM account");
+        $users =  DB::SELECT("SELECT * FROM account ");
         return view('Login_Register',['users' => $users]);
     }
 
@@ -72,13 +72,46 @@ class MyController extends Controller
 
     }
     //adminpage/
-    public function Admin(){
-        $id=$request->input('id')
-        DB::SELECT("SELECT * FROM tblbooking_info ",;
-        return view('Admin');
+      public function Admin(){
+     //command for retrieving records from the mysql database
+        $users =  DB::SELECT("SELECT * FROM tblbooking_info");
+        return view('/Admin',['users' => $users]);
     }
-    public function Update(){
-        return view('Update');
+    public function editData($id){
+        $profile = DB::SELECT("SELECT * FROM tblbooking_info WHERE id=?",[$id]);
+        $isUpdate = "";
+        return view('/Update',['profile'=> $profile,'isUpdate' => $isUpdate]);
     }
-
+    public function updatedata(Request $request ,$id){
+        
+        $lname=$request->input('lname');
+        $fname=$request->input('fname');
+        $barangay=$request->input('barangay');
+        $municipality=$request->input('municipality');
+        $province=$request->input('province');
+        $phone=$request->input('phone');
+        $email=$request->input('email');
+        $cottage_no=$request->input('cottage_no');
+        $kids=$request->input('kids');
+        $adult=$request->input('adult');
+        $senior=$request->input('senior');
+        $date_of_reg=$request->input('date_of_reg');
+        $time_=$request->input('time_');
+        $start=$request->input('start');
+        $end_=$request->input('end_');
+        $cottage_s=$request->input('cottage_s');
+        $cottage_m=$request->input('cottage_m');
+        $cottage_l=$request->input('cottage_l');
+        $venue=$request->input('venue');
+        $isUpdate =  DB::UPDATE('UPDATE tblbooking_info set lname=?,fname=?,barangay=?,municipality=?,province=?,phone=?,email=?,cottage_no=?,kids=?,adult=?,senior=?,date_of_reg=?,time_=?,start=?,end_=?,cottage_s=?,cottage_m=?,cottage_l=?,venue=? WHERE id=?',[$lname,$fname,$barangay,$municipality,$province,$phone,$email,$cottage_no,$kids,$adult,$senior,$date_of_reg,$time_,$start,$end_,$cottage_s,$cottage_m,$cottage_l,$venue, $id]);
+        $profile = DB::SELECT("SELECT * FROM tblbooking_info WHERE id=?",[$id]);
+        return view('/Update',['profile'=> $profile]);
+    }
+/*
+    public function seerch(Request $Request){
+        $search=$Request->get('search');
+        $posts=DB::table('posts')->WHERE('id','like','%'.$search.'%')->paginate(1);
+        return view('Admin',['posts'=> $posts]);
+    }
+*/
 }

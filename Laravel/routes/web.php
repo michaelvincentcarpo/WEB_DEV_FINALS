@@ -26,8 +26,13 @@ Route::get('/Form',[MyController::class,'Form'] );
 Route::post('/Form',[MyController::class,'insertdata'] );
 //admin page//
 Route::get('/Admin',[MyController::class,'admin'] );
-Route::post('/Admin',[MyController::class,'search'] );
-Route::post('/search',[MyController::class,'Update'] );
+Route::get('/search',[MyController::class,'search'] );
+Route::get('/search',[MyController::class,'/Update/{id}'] );
+Route::get('/Update/{id}',[MyController::class,'Update'] );
+Route::get('/Update/{id}',[HomeController::class,'editData']);
+
+//route for updating Data
+Route::post('/Update/{id}',[HomeController::class,'updateData']);
 
 //login/regester//
 Route::get('/Login_Register',[MyController::class,'Login_Register'] );
