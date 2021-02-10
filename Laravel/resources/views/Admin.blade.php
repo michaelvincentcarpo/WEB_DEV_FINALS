@@ -5,7 +5,7 @@
 </head>
 <link rel="stylesheet" type="text/css" href="css/admin.css">	
 <body>
-	<form action="/Update" method="get" >
+	<form action="/Admin" method="get" >
 	<div class="head" id="navbar">
 			<div class="search">
 				@csrf

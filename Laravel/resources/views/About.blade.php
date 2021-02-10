@@ -21,9 +21,10 @@
             <b> Contact:</b>09302047992/09770518793<br>
             <b>Email:</b>cozyplaceresort@yahoo.com<br>
             <b>Location:</b>Provicial Road Brgy, Rizal, Rosales, Pangasinan<br>
-            <b>WAZE Pin:</b> Cozy Place Resort
-
+            <b>WAZE Pin:</b> Cozy Place Resort<br>
+            <a href="/HomePage">home</a>
         </div>
     </div>
+
 </body>
 </html>

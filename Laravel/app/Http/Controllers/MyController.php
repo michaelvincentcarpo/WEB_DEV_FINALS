@@ -21,7 +21,7 @@ class MyController extends Controller
      if (count($data)) 
         
         {
-         return view ('/HomePage');
+         return view ('HomePage');
         }
         else {
             return view('Login_Register');
@@ -83,11 +83,23 @@ class MyController extends Controller
 
     }
     //adminpage/
-      public function Admin(){
-     //command for retrieving records from the mysql database
-        $users =  DB::SELECT("SELECT * FROM tblbooking_info");
-        return view('/Admin',['users' => $users]);
-    }
+      public function Admin(Request $request){
+        //initialization
+
+        $id=$request->input('id');
+
+     $profile =  DB::SELECT('SELECT id from tblbooking_info where id=?' , [$id,]);
+
+     if (count($profile)) 
+        
+        {
+         return view ('/Update');
+        }
+        else {
+            return view('/Admin');
+        }
+     }
+
     public function editData($id){
         $profile = DB::SELECT("SELECT * FROM tblbooking_info WHERE id=?",[$id]);
         $isUpdate = "";

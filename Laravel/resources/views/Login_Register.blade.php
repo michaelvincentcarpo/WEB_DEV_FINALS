@@ -24,7 +24,7 @@
    					<input type="text" name="txtem" class="input-field" placeholder="Email: "  required>
    					<input type="password" name="txtpa" class="input-field" placeholder="Password:" id="password"  required>
                   <div id="toggle" onclick="showhide();"></div>
-                  <div class="regtxt">If you don't have Account top the <b>REGISTER</b> buttont on top!
+                  <div class="regtxt">If you don't have Account top the <b>REGISTER</b> button on top!
                </div>
 
                   <br>
