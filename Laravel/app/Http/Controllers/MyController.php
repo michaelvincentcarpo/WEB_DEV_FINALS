@@ -9,13 +9,24 @@ class MyController extends Controller
 {
     //loginpage
 
+
     public function Login_Register(Request $request){
-     //command for retrieving records from the mysql database
-        $textem=$request->input('textem');
-        $textpa=$request->input('textpa');
-        $users =  DB::SELECT("SELECT * FROM account ");
-        return view('Login_Register',['users' => $users]);
-    }
+        //initialization
+
+        $username=$request->input('txtem');
+        $password=$request->input('txtpa');
+
+     $data =  DB::SELECT('SELECT uname from account where uname=? and pass=?' , [$username,$password]);
+
+     if (count($data)) 
+        
+        {
+         return view ('/HomePage');
+        }
+        else {
+            return view('Login_Register');
+        }
+     }
 
     public function insertacc(Request $request){
         //initialization

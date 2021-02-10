@@ -19,10 +19,10 @@
    					<img src="/img/anim.gif">
    				</div>	
 
-   				<form id="login" class="input" method="GET" class="/HomePage">
+   				<form id="login" class="input" method="GET" class="/Login_Register">
                   @csrf
-   					<input type="text" name="email" class="input-field" placeholder="Email: "  required>
-   					<input type="password" name="password" class="input-field" placeholder="Password:" id="password"  required>
+   					<input type="text" name="txtem" class="input-field" placeholder="Email: "  required>
+   					<input type="password" name="txtpa" class="input-field" placeholder="Password:" id="password"  required>
                   <div id="toggle" onclick="showhide();"></div>
                   <div class="regtxt">If you don't have Account top the <b>REGISTER</b> buttont on top!
                </div>
@@ -31,6 +31,32 @@
                   <br>
    					<input type="submit" class="submit" name="login" value="Login">
    				</form>
+<?php
+      $servername="localhost";
+      $username="root";
+      $password="";
+      $dbname="booking";
+
+$connect = mysqli_connect($servername,$username,$password,$dbname);
+
+      if(isset($_POST['login'])){
+      $email = $_POST['txtem'];
+      $password = $_POST['txtpa'];
+
+      $query= "SELECT * FROM account WHERE email='$email' AND pass='$password'";
+      $result= mysqli_query($connect,$query);
+      $count=mysqli_num_rows($result);
+
+
+      if($count>0){
+         header("/HomePage");
+         
+      }else {
+         echo "<b class='warning'>"."USERNAME AND PASSWORD IS INCORRECT"."</b>";     
+         
+      }
+   }
+?>
 
 
    				<form id="register" class="input" method="POST" class="/Login_Register">
